@@ -1,0 +1,25 @@
+# HSV thresholds for object detection
+# Adjust these for your specific objects and lighting
+object_detector:
+  ros__parameters:
+    # Green objects (real camera)
+    h_low: 35
+    h_high: 85
+    s_low: 150
+    s_high: 255
+    v_low: 100
+    v_high: 255
+    min_contour_area: 500
+    max_depth_m: 2.0
+
+# Gazebo simulation HSV thresholds (uncomment for sim)
+# object_detector:
+#   ros__parameters:
+#     h_low: 35
+#     h_high: 85
+#     s_low: 150
+#     s_high: 255
+#     v_low: 100
+#     v_high: 255
+#     min_contour_area: 500
+#     max_depth_m: 2.0

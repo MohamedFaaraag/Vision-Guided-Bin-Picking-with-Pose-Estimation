@@ -1,0 +1,19 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="BinPickingLoop">
+        <Sequence name="main_loop">
+            <RetryUntilSuccessful num_attempts="3">
+                <Sequence name="pick_object">
+                    <DetectObjects detected_poses="{detected_poses}"/>
+                    <SelectBestCandidate detected_poses="{detected_poses}"
+                                         target_pose="{target_pose}"/>
+                    <PlanGrasp target_pose="{target_pose}"
+                               plan_success="{plan_success}"/>
+                    <ExecutePick plan_success="{plan_success}"/>
+                    <VerifyGrasp/>
+                </Sequence>
+            </RetryUntilSuccessful>
+            <ExecutePlace/>
+            <CheckBinEmpty detected_poses="{detected_poses}"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

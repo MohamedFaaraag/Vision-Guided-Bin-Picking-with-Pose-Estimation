@@ -1,0 +1,26 @@
+# Configuration for the pick-and-place pipeline
+pick_and_place:
+  # Place location (in base_link frame)
+  place_pose:
+    x: 0.4
+    y: -0.3
+    z: 0.05
+
+  # Collision objects dimensions
+  table:
+    size: [1.0, 1.0, 0.02]
+    position: [0.4, 0.0, -0.01]
+  bin:
+    size: [0.30, 0.20, 0.10]
+    position: [0.4, 0.0, 0.05]
+
+  # Grasp parameters
+  grasp:
+    approach_distance: 0.10
+    lift_distance: 0.15
+    retreat_distance: 0.10
+
+  # Detection parameters
+  detection:
+    timeout_sec: 5.0
+    min_objects: 1

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ur5e_bin_picking_moveit_config</name>
+  <version>1.0.0</version>
+  <description>MoveIt2 configuration for UR5e bin picking workcell</description>
+  <maintainer email="student@university.edu">Student</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_ros_move_group</depend>
+  <depend>moveit_planners_ompl</depend>
+  <depend>moveit_kinematics</depend>
+  <depend>ur5e_bin_picking_description</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>
